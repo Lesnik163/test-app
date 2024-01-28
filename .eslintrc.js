@@ -13,5 +13,7 @@ module.exports = {
     rules: {
         // Перезаписать правила, указанные в расширенных конфигах, например:
         // "@typescript-eslint/explicit-function-return-type": "off",
+        "no-unused-expressions": "warn",
+        "no-unused-vars": "warn",
     },
 };

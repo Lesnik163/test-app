@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div>
-      Im Header
+      <Link to="/">Titular page </Link>
+      <Link to="/photo">Photo page </Link>
+      <Link to="/contacts">Contacts page</Link>
     </div>
   )
 }
