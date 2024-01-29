@@ -15,5 +15,6 @@ module.exports = {
         // "@typescript-eslint/explicit-function-return-type": "off",
         "no-unused-expressions": "warn",
         "no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "off",
     },
 };
