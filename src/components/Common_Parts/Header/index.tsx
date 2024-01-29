@@ -1,12 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import CustomLink from '../../Controls/Custom_Link';
 
 function Header() {
   return (
     <div>
-      <Link to="/">Titular page </Link>
-      <Link to="/photo">Photo page </Link>
-      <Link to="/contacts">Contacts page</Link>
+      <CustomLink to='/'>Titular page</CustomLink>
+      <CustomLink to='/service'>Service page</CustomLink>
+      <CustomLink to='/information'>Information page</CustomLink>
+      <CustomLink to='/photos'>Photo page</CustomLink>
+      <CustomLink to='/contacts'>Contacts page</CustomLink>
     </div>
   )
 }
