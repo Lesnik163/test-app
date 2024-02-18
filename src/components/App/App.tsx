@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledApp } from "./Styled";
 import TitularPage from "../Pages/Titular_page";
@@ -17,7 +17,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<TitularPage />} />
-              <Route path="service" element={<ServicePage />} />
+              <Route path="titular" element={<TitularPage />} />
+              <Route path="services" element={<ServicePage />} />
               <Route path="photos" element={<PhotosPage />} />
               <Route path="photos/:id" element={<Photo />} />
               <Route path="information" element={<InformationPage />} />
@@ -31,4 +32,4 @@ const App = () => {
   );
 }
 
-export default memo(App);
+export default App;
