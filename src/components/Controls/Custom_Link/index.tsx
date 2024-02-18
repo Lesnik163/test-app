@@ -1,22 +1,25 @@
-import React, { memo } from 'react'
-import { NavLink, useMatch } from 'react-router-dom';
+import React from "react";
+import { NavLink as RouterNavLink, useMatch } from "react-router-dom";
+import { Link as MuiLink } from "@mui/material";
 
-type CustomLinkProps = {
+type CustomNavLinkProps = {
   children: React.ReactNode;
   to: string;
   [key: string]: any;
-}
-const CustomLink = ({children, to, ...props}: CustomLinkProps) => {
+};
+const CustomNavLink = ({ children, to, ...props }: CustomNavLinkProps) => {
   const match = useMatch(to);
   return (
-    <NavLink 
-    to={to} 
-    style={{color: match ? 'blueviolet': 'black'}}
-    {...props}
+    <RouterNavLink
+      to={to}
+      style={{ color: match ? "yellow" : "white" }}
+      {...props}
     >
-      {children}
-    </NavLink>
-  )
-}
+      <MuiLink component="button" sx={{ color: "inherit", textDecoration: match ? "underline" : "" }}>
+        {children}
+      </MuiLink>
+    </RouterNavLink>
+  );
+};
 
-export default memo(CustomLink);
+export default CustomNavLink;
