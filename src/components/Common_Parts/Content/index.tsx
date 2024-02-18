@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Content(props: {children: React.ReactNode}) {
+const Content = (props: {children: React.ReactNode}) => {
   return (
     <div>
       {props.children}

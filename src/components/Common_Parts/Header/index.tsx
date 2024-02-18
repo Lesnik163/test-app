@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 // import { NavLink } from 'react-router-dom';
 import CustomLink from '../../Controls/Custom_Link';
 
-function Header() {
+const Header = () => {
   return (
     <div>
       <CustomLink to='/'>Titular page</CustomLink>

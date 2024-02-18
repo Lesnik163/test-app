@@ -12,7 +12,7 @@ const StyledPhoto = styled.div`
   width: 200px;
 `;
 
-function Photo(props: any) {
+const Photo = (props: any) => {
   const {src} = props;
   const { id } = useParams();
   const undefinedSrc = photos.find(photo => String(photo.id) === id)?.href

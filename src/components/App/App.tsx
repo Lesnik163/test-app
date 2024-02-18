@@ -10,7 +10,7 @@ import ContactsPage from "../Pages/Contacts_page";
 import InformationPage from "../Pages/Information_page";
 import Photo from "../Pages/Photos_page/Photo";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <StyledApp>

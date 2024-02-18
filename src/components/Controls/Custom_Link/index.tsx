@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { NavLink, useMatch } from 'react-router-dom';
 
 type CustomLinkProps = {
@@ -6,7 +6,7 @@ type CustomLinkProps = {
   to: string;
   [key: string]: any;
 }
-function CustomLink({children, to, ...props}: CustomLinkProps) {
+const CustomLink = ({children, to, ...props}: CustomLinkProps) => {
   const match = useMatch(to);
   return (
     <NavLink 
@@ -16,8 +16,7 @@ function CustomLink({children, to, ...props}: CustomLinkProps) {
     >
       {children}
     </NavLink>
-      
   )
 }
 
-export default CustomLink
+export default memo(CustomLink);
