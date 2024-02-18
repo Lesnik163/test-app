@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ServicePage() {
+const ServicePage = () => {
   return (
     <div>
       Im service

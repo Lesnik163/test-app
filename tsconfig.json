@@ -22,6 +22,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    ".eslintrc.js",
+    "src/photos/photos.ts",
   ]
 }

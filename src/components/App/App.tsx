@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledApp } from "./Styled";
 import TitularPage from "../Pages/Titular_page";
@@ -10,7 +10,7 @@ import ContactsPage from "../Pages/Contacts_page";
 import InformationPage from "../Pages/Information_page";
 import Photo from "../Pages/Photos_page/Photo";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <StyledApp>
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

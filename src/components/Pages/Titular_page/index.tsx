@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TitularPage() {
+const TitularPage = () => {
   return (
     <div>
       Titul

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function InformationPage() {
+const InformationPage = () => {
   return (
     <div>
       Im procedure information

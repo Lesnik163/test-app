@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../Common_Parts/Header';
 import Footer from '../Common_Parts/Footer';
  
-function Layout() {
+const Layout = () => {
   return (
    <>
     <Header />
@@ -13,4 +13,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export default memo(Layout)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <div>
       This page doesnt exist <Link to='/'>go titular</Link>
