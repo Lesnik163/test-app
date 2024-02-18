@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledApp } from "./Styled";
 import TitularPage from "../Pages/Titular_page";
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

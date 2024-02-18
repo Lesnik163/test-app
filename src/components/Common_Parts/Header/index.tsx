@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 // import { NavLink } from 'react-router-dom';
 import CustomLink from '../../Controls/Custom_Link';
 
@@ -14,4 +14,4 @@ function Header() {
   )
 }
 
-export default Header
+export default memo(Header);
