@@ -1,10 +1,13 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 
-import { photos } from "../../../photos/photos";
 import styled from "styled-components";
 import Photo from "./Photo";
-import { Link } from "react-router-dom";
+import { getPhotos } from "../../../services/photo";
 
+export type Photos = {
+  id: number;
+  src: string;
+};
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -12,15 +15,22 @@ const StyledWrapper = styled.div`
   justify-items: center;
 `;
 
-const PhotosPage = () =>{
+const PhotosPage = () => {
+  const [photos, setPhotos] = useState<Photos[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const dataInfo = await getPhotos();
+      setPhotos(dataInfo);
+    };
+    fetchData();
+  }, []);
   return (
     <StyledWrapper>
-      {photos.map((photo) => {
-        return (
-            <Link to={`${photo.id}`} key={photo.id}><Photo src={photo.href}/></Link>
-        );
+      {photos?.map((photo: Photos) => {
+        return <Photo src={photo?.src} key={photo?.id} />;
       })}
     </StyledWrapper>
   );
-}
+};
 export default memo(PhotosPage);

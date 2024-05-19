@@ -98,7 +98,7 @@ const Header = () => {
                   <CustomNavLink
                     key={page}
                     sx={{ my: 2, display: "block" }}
-                    to={page}
+                    to={page.toLocaleLowerCase()}
                   >
                     {Tabs[page]}
                   </CustomNavLink>

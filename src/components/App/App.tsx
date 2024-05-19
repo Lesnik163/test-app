@@ -8,7 +8,6 @@ import NotFoundPage from "../Pages/Not_Found_page";
 import Layout from "../Layout";
 import ContactsPage from "../Pages/Contacts_page";
 import InformationPage from "../Pages/Information_page";
-import Photo from "../Pages/Photos_page/Photo";
 
 const App = () => {
   return (
@@ -20,7 +19,6 @@ const App = () => {
               <Route path="titular" element={<TitularPage />} />
               <Route path="services" element={<ServicePage />} />
               <Route path="photos" element={<PhotosPage />} />
-              <Route path="photos/:id" element={<Photo />} />
               <Route path="information" element={<InformationPage />} />
               <Route path="information/:procedure" element={<InformationPage />} />
               <Route path="contacts" element={<ContactsPage />} />
