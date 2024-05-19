@@ -16,5 +16,7 @@ module.exports = {
         "no-unused-expressions": "warn",
         "no-unused-vars": "warn",
         "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "no-console": [1, { "allow": ["error"] }]
     },
 };
